@@ -2,7 +2,7 @@
 
 ### Basic Info 
 
-- Framework Used: <b>Spring-Boot</b>
+- Framework Used: <b>Spring-Boot</b> (Project template generated using https://start.spring.io/)
 - Build Tool: <b>Maven</b>
 - Database Used: <b>PostgresQL</b>
 
@@ -29,10 +29,10 @@
 - Download the Apache Maven zip, unzip and add the bin folder to the PATH system environment variable.
 - <u>If PGSQL not setup</u> 
   - Install PostgreSQL database, (and pgJDBC driver which comes with PGSQL setup tool). Remember the root username and password.
-- Start the PostgreSQL service, and create a new server called nunam_assessment.
+- Start the PostgreSQL service, and create a new database called nunam_assessment.
 - Clone the repo.
 - In the resources folder in ~/src/main/, open the application.properties file, and change the url of the database server, username and password.
-- If you want to generate sample data first, uncommment the line of code in src/main/java/DemoApplication.java.
+- If you want to generate sample data first, uncommment the line of code in src/main/java/com.example.demo/DemoApplication.java.
 - From a powershell terminal cd to the directory of the repo, and run the following command, when running for the first time, which will install dependencies and run the project.
   ```bash
   mvn clean install

@@ -86,8 +86,11 @@
     ```
     crontab -e
     ```
-  - 59 23 * * * {Absolute path to schedule.sh script}
-
+  - Add the following entry to the cron table
+    ```
+    59 23 * * * "Absolute path to schedule.sh script"
+    ```
+    
 ### Working screenshots
 
   ![image](https://github.com/tru69er/Nunam-Assessment/assets/75154468/b7e25285-cf16-4009-a469-780ce8b07ea4)

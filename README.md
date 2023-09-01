@@ -74,7 +74,21 @@
 
   With the above steps followed, the project should be scheduled to run every night to calculate the data collected by the vehicles on that day, and add the calculated statistics to the other table.
 
-  ### Working screenshots
+- Linux
+
+  - We can schedule the project using the CRON table.
+  - Edit the schedule.sh to put the absolute path of the project in the cd command.
+  - Give the schedule.sh file executable permissions.
+    ```bash
+    chmod +x run_my_app.sh
+    ```
+  - Open the cron table with an editor
+    ```
+    crontab -e
+    ```
+  - 59 23 * * * {Absolute path to schedule.sh script}
+
+### Working screenshots
 
   ![image](https://github.com/tru69er/Nunam-Assessment/assets/75154468/b7e25285-cf16-4009-a469-780ce8b07ea4)
 

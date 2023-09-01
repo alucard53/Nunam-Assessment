@@ -2,18 +2,18 @@
 
 ### Basic Info 
 
-- Framework Used: <b>Spring-Boot</b>
+- Framework Used: <b>Spring-Boot</b> (Project template generated using https://start.spring.io/)
 - Build Tool: <b>Maven</b>
 - Database Used: <b>PostgresQL</b>
 
 ### Database Info
 
-![image](https://github.com/tru69er/Nunam-Assessment/assets/75154468/ab1611e0-a01b-46e2-a407-8b9efeaa2fb6)
+![image](https://github.com/tru69er/Nunam-Assessment/assets/75154468/769d9eb0-8af3-4ddd-8d09-6add2af0470a)
 
 - Vehicles: To store data of each vehicles required (4 Vehicles kept in sample data)
   - Primary Key: Vehicle Number
 - Data: To store the data uploaded by the vehicles each minute.
-  - Composite Primary Key: Vehicle Number, Time
+  - Composite Primary Key: Vehicle Number, Date, Time
   - Foreign Key with Vehicles: Vehicle Number
 - Statistics: To store the values calculated from the Data table.
   - Composite Primary Key: Vehicle Number, Data
@@ -29,10 +29,10 @@
 - Download the Apache Maven zip, unzip and add the bin folder to the PATH system environment variable.
 - <u>If PGSQL not setup</u> 
   - Install PostgreSQL database, (and pgJDBC driver which comes with PGSQL setup tool). Remember the root username and password.
-- Start the PostgreSQL service, and create a new server called nunam_assessment.
+- Start the PostgreSQL service, and create a new database called nunam_assessment.
 - Clone the repo.
-- In the resources folder in src/main/java, open the application.properties file, and change the url of the database server, username and password.
-- If you want to generate sample data first, uncommment the line of code in src/main/java/DemoApplication.java.
+- In the resources folder in ~/src/main/, open the application.properties file, and change the url of the database server, username and password.
+- If you want to generate sample data first, uncommment the line of code in src/main/java/com.example.demo/DemoApplication.java.
 - From a powershell terminal cd to the directory of the repo, and run the following command, when running for the first time, which will install dependencies and run the project.
   ```bash
   mvn clean install
@@ -74,7 +74,21 @@
 
   With the above steps followed, the project should be scheduled to run every night to calculate the data collected by the vehicles on that day, and add the calculated statistics to the other table.
 
-  ### Working screenshots
+- Linux
+
+  - We can schedule the project using the CRON table.
+  - Edit the schedule.sh to put the absolute path of the project in the cd command.
+  - Give the schedule.sh file executable permissions.
+    ```bash
+    chmod +x run_my_app.sh
+    ```
+  - Open the cron table with an editor
+    ```
+    crontab -e
+    ```
+  - 59 23 * * * {Absolute path to schedule.sh script}
+
+### Working screenshots
 
   ![image](https://github.com/tru69er/Nunam-Assessment/assets/75154468/b7e25285-cf16-4009-a469-780ce8b07ea4)
 

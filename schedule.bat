@@ -1,4 +1,3 @@
-$projPath = Split-Path $myInvocation.MyCommand.Path -Parent
-cd $projPath
+cd %CD%
 
 mvn spring-boot:run

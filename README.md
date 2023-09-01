@@ -8,12 +8,12 @@
 
 ### Database Info
 
-![image](https://github.com/tru69er/Nunam-Assessment/assets/75154468/ab1611e0-a01b-46e2-a407-8b9efeaa2fb6)
+![image](https://github.com/tru69er/Nunam-Assessment/assets/75154468/769d9eb0-8af3-4ddd-8d09-6add2af0470a)
 
 - Vehicles: To store data of each vehicles required (4 Vehicles kept in sample data)
   - Primary Key: Vehicle Number
 - Data: To store the data uploaded by the vehicles each minute.
-  - Composite Primary Key: Vehicle Number, Time
+  - Composite Primary Key: Vehicle Number, Date, Time
   - Foreign Key with Vehicles: Vehicle Number
 - Statistics: To store the values calculated from the Data table.
   - Composite Primary Key: Vehicle Number, Data

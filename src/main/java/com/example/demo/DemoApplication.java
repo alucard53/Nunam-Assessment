@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import com.example.demo.Data.DataService;
+import com.example.demo.Stat.StatService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -20,7 +22,7 @@ public class DemoApplication {
 		var ctx = SpringApplication.run(DemoApplication.class, args);
 
 //		Uncomment the line below to generate sample data
-//		dataService.genNew();
+		dataService.genNew();
 
 		statService.addCurrDay(dataService.getStat());
 		SpringApplication.exit(ctx);

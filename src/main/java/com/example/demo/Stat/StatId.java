@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.Stat;
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;

@@ -1,6 +1,5 @@
-package com.example.demo;
+package com.example.demo.Stat;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface StatRepo extends JpaRepository<Stat, StatId> {

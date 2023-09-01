@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.Stat;
 
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;

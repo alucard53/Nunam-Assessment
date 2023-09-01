@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.example.demo.Data;
 
+import com.example.demo.Stat.Stat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -50,20 +51,26 @@ public class DataService {
 
         Date date = Date.valueOf(LocalDate.now());
 
+        //Adds data from current day to 30 days in future
+        //Change the limit of the loop to change the number of days for which
+        //data is generated
         for (int d = 0; d <= 30; d++) {
             date = Date.valueOf(
                     date
                     .toLocalDate()
                     .plusDays(d)
             );
+            //Loop to generate data for each vehicle
             for (int i = 1; i <= 4; i++) {
 
                 Double[] coord = {19.0760, 72.8777};
-                data.date = date;
+                data.id.date = date;
                 data.id.time = Time.valueOf(LocalTime.of(9, 30, 0));
                 data.location = coord;
                 data.id.vNumber = i;
 
+                //Generate 10 minutes for each vehicle
+                //Change limit of loop to generate more data per day
                 for (int j = 1; j < 10; j++) {
                     data.load = 50.0 + rand.nextDouble() * 100;
                     data.speed = rand.nextDouble() * 100;

@@ -80,7 +80,7 @@
   - Edit the schedule.sh to put the absolute path of the project in the cd command.
   - Give the schedule.sh file executable permissions.
     ```bash
-    chmod +x run_my_app.sh
+    chmod +x schedule.sh
     ```
   - Open the cron table with an editor
     ```
